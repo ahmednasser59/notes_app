@@ -29,7 +29,20 @@ class NotesApp extends StatelessWidget {
       create: (context) => NotesCubit(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          fontFamily: 'Poppins',
+          scaffoldBackgroundColor: const Color(0xff121214),
+          floatingActionButtonTheme: const FloatingActionButtonThemeData(
+            backgroundColor: kPrimaryColor,
+            foregroundColor: Colors.black,
+          ),
+          textSelectionTheme: const TextSelectionThemeData(
+            cursorColor: kPrimaryColor,
+            selectionColor: kPrimaryColor,
+            selectionHandleColor: kPrimaryColor,
+          ),
+        ),
         home: const NotesView(),
       ),
     );
